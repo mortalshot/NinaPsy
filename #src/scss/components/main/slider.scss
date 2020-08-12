@@ -1,0 +1,95 @@
+.first-screen {
+    &__slider {
+    }
+}
+
+.slider-main {
+    &__slide {
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &__container {
+        max-width: 1040px;
+    }
+    
+    &__text {
+        padding: 35.6% 0;
+        text-align: center;
+
+        @media screen and (max-width: 991px) {
+            padding: 20% 0;
+        }
+    }
+
+    &__quote {
+        font-family: "Cormorant Garamond";
+        font-weight: 700;
+        font-size: calc(24px + 31 * ((100vw - 320px) / (1920 - 320)));
+        line-height: calc(64 / 55);
+        padding-bottom: 49px;
+
+        @media screen and (max-width: 991px) {
+            padding-bottom: 30px;
+        }
+
+        @media screen and (max-width: 575px) {
+            padding-bottom: 15px;
+        }
+    }
+
+    &__author {
+        font-size: calc(12px + 13 * ((100vw - 320px) / (1920 - 320)));
+        line-height: calc(29 / 25);
+    }
+}
+
+.slick-dots {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 88px;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    @media screen and (max-width: 991px) {
+        bottom: 30px;
+    }
+
+    @media screen and (max-width: 575px) {
+        bottom: 20px;
+    }
+
+    li {
+        margin-right: 10px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &.slick-active {
+            button {
+                width: 20px;
+                height: 20px;
+            }
+        }
+
+        button {
+            font-size: 0;
+            border: none;
+            background: #000;
+            border-radius: 50%;
+            display: block;
+            width: 10px;
+            height: 10px;
+            cursor: pointer;
+            transition: 0.3s ease all 0s;
+
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+}

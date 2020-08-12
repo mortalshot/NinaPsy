@@ -8,4 +8,19 @@
 	}
 }
 
+
 @import "fonts";
+@import "variables";
+@import "basic-style";
+@import "input";
+@import "_header";
+@import "slick";
+@import "components/main/slider";
+
+.site-main {
+	padding: 100px 0px 0px 0px;
+
+	@media screen and (max-width: 767px) {
+		padding: 70px 0px 0px 0px;
+	}
+}
