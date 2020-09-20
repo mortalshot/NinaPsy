@@ -230,6 +230,10 @@
 .menu {
 	&__link {
         color: #000;
-        white-space: nowrap;
+		white-space: nowrap;
+		transition: 0.3s ease all 0s;
+		&:hover {
+			color: $accent-color;
+		}
 	}
 }

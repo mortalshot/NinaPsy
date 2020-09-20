@@ -47,6 +47,13 @@ section {
     }
 }
 
+.first-section {
+    padding-top: 50px;
+    @media screen and (max-width: 991px) {
+        padding-top: 25px;
+    }
+}
+
 .container {
     max-width: $container;
     margin: 0 auto;
@@ -198,10 +205,11 @@ section {
 }
 
 .button {
+    font-family: Montserrat;
     font-weight: 700;
     font-size: 20px;
     line-height: 1;
-    letter-spacing: 1.8px;
+    letter-spacing: 0.9px;
     text-decoration: none;
     color: $text-color;
     white-space: nowrap;
@@ -213,6 +221,11 @@ section {
     border: 3px solid #000;
     border-radius: 10px;
     cursor: pointer;
+    transition: 0.3s ease all 0s;
+    &:hover {
+        color: $hover-color;
+        border-color: $hover-color;
+    }
 
     @media screen and (max-width: 1990px) {
         font-size: calc(13px + 7 * ((100vw - 320px) / (1920 - 320)));
@@ -228,5 +241,56 @@ section {
 
     @media screen and (max-width: 450px) {
         padding: 13px 22px;
+    }
+}
+
+.slick-arrow {
+    font-size: 0;
+    line-height: 1;
+    background: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 21px;
+    height: 40px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+
+    &::before {
+        content: "";
+        background: url(../img/icons/triangle.svg) no-repeat;
+        display: block;
+        width: 21px;
+        height: 40px;
+    }
+
+    &.slick-prev {
+        left: 0;
+        &::before {
+            transform: rotate(-180deg);
+        }
+    }
+    &.slick-next {
+        right: 0;
+    }
+}
+.back-arrow {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    color: #000000;
+
+    &::before {
+        content: "";
+        display: inline-block;
+        width: 26px;
+        height: 16px;
+        background: url(../img/icons/back-arrow.svg);
+        margin-right: 10px;
     }
 }

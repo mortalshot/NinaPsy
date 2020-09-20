@@ -1,0 +1,89 @@
+.accordion {
+    &__item {
+        border-bottom: 2px solid #eaeaea;
+    }
+
+    // .accordion__title
+    &__title {
+        padding: 20px 60px 20px 15px;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 21px;
+        position: relative;
+        letter-spacing: 1px;
+        cursor: pointer;
+
+        @media screen and (max-width: 1920px) {
+            font-size: calc(12px + 8 * ((100vw - 320px) / (1920 - 320)));
+            line-height: calc(21 / 20);
+        }
+
+        @media screen and (max-width: 767px) {
+            padding-right: 50px;
+        }
+
+        @media screen and (max-width: 575px) {
+            padding-right: 26px;
+            padding: 20px 26px 20px 0;
+        }
+
+        &::before,
+        &::after {
+            content: "";
+            width: 19px;
+            height: 2px;
+            background-color: #000;
+            position: absolute;
+            top: 50%;
+            transform: translate(0, -50%);
+            transition: 0.3s ease all 0s;
+
+            @media screen and (max-width: 767px) {
+                width: 12px;
+            }
+        }
+
+        &::before {
+            transform: translate(0, -50%) rotate(-30deg);
+            right: 14px;
+            border-radius: 2px 5px 5px 2px;
+
+            @media screen and (max-width: 575px) {
+                right: 0;
+            }
+        }
+
+        &::after {
+            transform: translate(0, -50%) rotate(30deg);
+            right: 30px;
+            border-radius: 5px 2px 2px 5px;
+
+            @media screen and (max-width: 767px) {
+                right: 24px;
+            }
+            @media screen and (max-width: 575px) {
+                right: 9px;
+            }
+        }
+
+        &.active {
+            &::before {
+                transform: translate(0, -50%) rotate(30deg);
+            }
+            &::after {
+                transform: translate(0, -50%) rotate(-30deg);
+            }
+        }
+    }
+
+    // .accordion__text
+    &__text {
+        display: none;
+        padding: 0 15px 20px;
+        display: none;
+
+        @media screen and (max-width: 450px) {
+            padding: 0px 30px 15px 0;
+        }
+    }
+}
