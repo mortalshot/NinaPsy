@@ -1,0 +1,54 @@
+<section class="consultation-form">
+    <div class="consultation-form__container container">
+        <h1 class="consultation-form__section-title section-title section-title--center"><span>ГОТОВЫ ОБРАТИТЬСЯ ЗА
+                КОНСУЛЬТАЦИЕЙ К ПСИХОЛОГУ?</span></h1>
+
+        <form class="consultation-form__form" action="">
+            <div class="consultation-form__attention-text">Обратите внимание - через форму на сайте можно записаться
+                только на очную консультацию. <br>
+                Для получения заочной консультации необходимо обратиться по данным, указанным в разделе “<a href="">Контакты</a>”.
+            </div>
+
+
+            <div class="consultation-form__wrapper">
+                <div class="input-wrapper">
+                    <input type="text" id="consultation-form__name" class="input-wrapper__text" placeholder="Ваше имя">
+                </div>
+
+                <div class="input-wrapper">
+                    <input type="text" id="consultation-form__phone" class="input-wrapper__text" placeholder="Телефон">
+                </div>
+
+                <div class="input-wrapper">
+                    <input type="text" id="consultation-form__data" class="input-wrapper__text" placeholder="Дата">
+                </div>
+
+                <div class="input-wrapper">
+                    <input type="text" id="consultation-form__time" class="input-wrapper__text" placeholder="Время">
+                </div>
+
+                <div class="input-wrapper input-wrapper--select">
+                    <select name="type" id="select" class="input-wrapper__text input-wrapper__text--select">
+                        <option value="" disabled selected>Выберите вид консультации</option>
+                        <option value="1">Индивидуальная очная консультация</option>
+                        <option value="2">Консультация для пары</option>
+                    </select>
+                </div>
+
+                <div class="input-wrapper input-wrapper--textarea">
+                    <textarea id="" class="input-wrapper__text input-wrapper__text--textarea" placeholder="Кратко опишите вашу проблему"></textarea>
+                </div>
+            </div>
+
+            <div class="input-wrapper input-wrapper--check">
+                <input type="checkbox" id="privacy-accept" class="input-wrapper__input">
+                <label for="privacy-accept" class="input-wrapper__label">Даю согласие на обработку персональных данных.
+                    <a class="privacy-policy" href="">Политика конфиденциальности</a></label>
+            </div>
+
+            <div class="input-wrapper input-wrapper--button">
+                <button class="consultation-form__button button" type="submit">Записаться на консультацию</button>
+            </div>
+        </form>
+    </div>
+</section>

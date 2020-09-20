@@ -16,9 +16,6 @@
 		z-index: 2;
 	}
 
-	&__container {
-	}
-
 	&__body {
 		display: flex;
 		justify-content: space-between;
@@ -33,6 +30,19 @@
 
 	&__logo {
 		z-index: 2;
+	}
+
+	&__logo-link {
+		display: flex;
+        align-items: center;
+        justify-content: center;
+		max-width: 260px;
+		
+		.logo__text-wrapper {
+			@media screen and (max-width: 991px) {
+				display: none;
+			}
+		}
 	}
 
 	&__burger {
@@ -92,7 +102,6 @@
     }
 
 	&__menu {
-
 		@media screen and (max-width: 767px) {
 			position: fixed;
 			top: -100%;
@@ -114,11 +123,6 @@
     &__login {
         position: relative;
         z-index: 2;
-        margin-bottom: 10px;
-
-        @media screen and (max-width: 767px) {
-            margin: 0;
-        }
 
         a {
             color: #000;
@@ -151,10 +155,13 @@
 
 	&__item {
 		margin-right: 40px;
-
 		&:last-child {
 			margin-right: 0;
-        }
+		}
+		
+		@media screen and (max-width: 1200px) {
+			margin-right: 35px;
+		}
         
         @media screen and (max-width: 991px) {
             margin-right: 20px;
@@ -166,28 +173,21 @@
 	}
 
 	&__link {
-		text-transform: uppercase;
-        line-height: 1;
-        color: #000;
         font-weight: 700;
 		font-size: 14px;
-        text-decoration: none;
-        white-space: nowrap;
+		line-height: 1;
+		text-transform: uppercase;
 	}
 }
 
 .logo {
 	&__link {
         color: #000;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-decoration: none;
-        max-width: 260px;
 	}
 
 	&__img {
-        flex: 0 0 64px;
+		flex: 0 0 64px;
+		max-width: 64px;
         margin-right: 10px;
         
         img {
@@ -205,22 +205,31 @@
         }
 	}
 
-	&__text-wrapper {
-        @media screen and (max-width: 991px) {
-            display: none;
-        }
-	}
-
 	&__name {
         font-weight: 700;
         font-size: 20px;
         line-height: 1;
         white-space: nowrap;
-        margin-bottom: 3px;
+		margin-bottom: 3px;
+		
+		@media screen and (max-width: 1920px) {
+			font-size: calc(13px + 7 * ((100vw - 320px) / (1920 - 320)));
+		}
 	}
 
 	&__post {
         font-size: 12px;
-        line-height: 15px;
+		line-height: 15px;
+		
+		@media screen and (max-width: 1920px) {
+			font-size: calc(9px + 3 * ((100vw - 320px) / (1920 - 320)));
+		}
+	}
+}
+
+.menu {
+	&__link {
+        color: #000;
+        white-space: nowrap;
 	}
 }
